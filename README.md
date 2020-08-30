@@ -1,5 +1,4 @@
 <h1>DOM Exercise (tutoring 02)</h1>
-<p>In this exercise we will test you with the basic dom concepts. Dom selectors, creating elements and changing the looks of the data in your HTML.
 <p>Given the following HTML in: <i><strong>dom-exercise-01.html</strong></i></p>
 <h4>Write the code necessary to do the following:</h4>
 <ul>
