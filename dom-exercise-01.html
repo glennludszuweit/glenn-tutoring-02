@@ -24,5 +24,37 @@
   </body>
   <script>
     //code goes here
+    let paragraph = document.querySelector('p');
+    let paragraphArr = paragraph.innerText.split(' '); // Array.from(paragraph);
+
+    let string = '';
+    paragraphArr.forEach((word) => {
+      if (word.length >= 10) {
+        string = string + ' ' + word;
+      }
+    });
+    console.log(string);
+    // let wordsWith10Letters = paragraphArr.map((word) => {
+    //   if (word.length >= 10) {
+    //     return word;
+    //   }
+    // });
+    // let newParagraph = wordsWith10Letters.join(' ');
+    // console.log(newParagraph);
+
+    let createNewP = document.createElement('p');
+    createNewP.innerText = string;
+    createNewP.classList.add('second-p');
+    createNewP.style.color = 'red';
+    document.body.appendChild(createNewP, paragraph);
+
+    let createLinkToGithub = document.createElement('a');
+    createLinkToGithub.href = 'https://github.com/glennludszuweit/';
+    createLinkToGithub.classList.add('github-profile');
+    createLinkToGithub.textContent = 'Checkout my github profile';
+
+    let secondP = document.querySelector('.second-p');
+    //secondP.prepend(createLinkToGithub);
+    document.body.insertBefore(createLinkToGithub, createNewP);
   </script>
 </html>
